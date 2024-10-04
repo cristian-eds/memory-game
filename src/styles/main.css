@@ -4,6 +4,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: lightslategrey;
+    user-select: none;
 }
 
 .container {
@@ -13,17 +14,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(
-        325deg, 
-        #00113e 0%,
-        #3434ca 30%,
-        #6869da 70%,
-        #b3b7fc 100%
-    );
+    background: linear-gradient(325deg,
+            #00113e 0%,
+            #3434ca 30%,
+            #6869da 70%,
+            #b3b7fc 100%);
     padding: 40px 60px;
 }
 
-.container h2 {
+h2 {
     font-size: 3rem;
     color: #fff;
     text-transform: uppercase;
@@ -32,7 +31,7 @@ body {
 
 .reset {
     padding: 15px 20px;
-    width: 90%;
+    width: 100%;
     color: #000;
     background-color: #fff;
     border: none;
@@ -51,7 +50,6 @@ body {
 }
 
 .game {
-    border: 1px solid #000000;
     width: 430px;
     height: 430px;
     display: flex;
@@ -69,4 +67,29 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    font-size: 3em;
+
+    transform: rotateY(180deg);
+    transition: .25s;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.8;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    background: #404040;
+
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
 }
