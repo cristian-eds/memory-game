@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: lightslategrey;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(
+        325deg, 
+        #00113e 0%,
+        #3434ca 30%,
+        #6869da 70%,
+        #b3b7fc 100%
+    );
+    padding: 40px 60px;
+}
