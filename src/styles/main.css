@@ -22,3 +22,51 @@ body {
     );
     padding: 40px 60px;
 }
+
+.container h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+}
+
+.reset {
+    padding: 15px 20px;
+    width: 90%;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.reset:hover {
+    background-color: rgb(67, 116, 172);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid white;
+}
+
+.game {
+    border: 1px solid #000000;
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
